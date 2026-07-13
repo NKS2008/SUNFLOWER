@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Interactive Light Pink Lily Bloom using Hand Gestures">
+
+    <title>🌸 Light Pink Lily Bloom</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="lily-theme">
+
+<div class="container">
+
+    <!-- Webcam -->
+    <video
+        id="webcam"
+        autoplay
+        playsinline>
+    </video>
+
+    <!-- Canvas -->
+    <canvas id="canvas"></canvas>
+
+    <!-- Vignette -->
+    <div class="vignette"></div>
+
+    <!-- Loading Screen -->
+    <div
+        class="loading-overlay"
+        id="loading">
+
+        <div class="loading-flower">
+            🌸
+        </div>
+
+        <div class="loading-text">
+            Initializing Hand Tracking
+        </div>
+
+        <div class="loading-subtext">
+            Please Allow Camera Access
+        </div>
+
+    </div>
+
+    <!-- Instructions -->
+    <div
+        class="instructions"
+        id="instructions">
+
+        <span>Left Hand Pinch</span>
+
+        controls Bloom
+
+        &nbsp; • &nbsp;
+
+        <span>Right Hand Pinch</span>
+
+        controls Growth
+
+        &nbsp; • &nbsp;
+
+        <span>Move Hands</span>
+
+        creates Wind
+
+    </div>
+
+</div>
+
+<script>
+
+const FLOWER_TYPE = "lily";
+
+</script>
+
+<!-- MediaPipe Hands -->
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js"></script>
+
+<!-- Camera Utils -->
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js"></script>
+
+<!-- Main Application -->
+<script src="app.js"></script>
+
+</body>
+
+</html>
